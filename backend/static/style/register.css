@@ -13,7 +13,9 @@
     justify-content: center;
     margin: 70px auto;
 }
-
+:root {
+    --add: #ffa500;
+  }
 .registerBox {
 
     display: flex;
@@ -149,7 +151,7 @@
 .registerFooter button {
     width: 303px;
     height: 42px;
-    background: #E81D1C;
+    background: var(--add);
     border: none;
     cursor: pointer;
     border-radius: 10px;

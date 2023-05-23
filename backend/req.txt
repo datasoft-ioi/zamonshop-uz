@@ -1,0 +1,12 @@
+django==3.2.13
+django-cors-headers
+djangorestframework
+pillow
+whitenoise
+django-mptt
+djangorestframework_simplejwt
+twilio
+requests
+environs
+channels
+channels_redis

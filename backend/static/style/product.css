@@ -1,0 +1,199 @@
+.ProductPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 50px auto;
+    gap: 25px;
+    width: 1220px;
+}
+
+:root {
+    --add: #FFA500;
+}
+
+.productInfoo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.productImages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 439px;
+    height: 409px;
+    background: #FFFFFF;
+    border: 0.5px solid #D1D1D1;
+    border-radius: 10px;
+}
+
+.images img {
+    height: 347px;
+    width: 329px;
+    border-radius: 0px;
+}
+
+.images2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.images2 img {
+    width: 64px;
+    height: 67px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.images2 img:hover {
+    transform: translateY(-5px);
+    transition: all 0.4s ease;
+    scale: 110%;
+}
+
+.productInfoAll {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 30px;
+}
+
+.productInfoAll span {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.productInfoAll p {
+    font-size: 16px;
+}
+
+.productInfoZakaz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.priceZakaz {
+    background-color: var(--add);
+    color: white;
+    width: 290px;
+    height: 186px;
+    box-shadow: 0px 0px 10px rgba(12, 15, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 2;
+}
+
+.priceZakaz span {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+}
+
+.zakazInfo {
+    background-color: var(--add);
+    color: white;
+    width: 290px;
+    height: 196px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    transform: translateY(-20px);
+    z-index: 1;
+    gap: 10px;
+}
+
+.zakazInfo p {
+    transform: translateY(20px);
+
+}
+.priceZakazBtns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+.priceZakazBtns p{
+    width: 248px;
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    transition: all 0.4s ease;  
+}
+.priceZakazBtns p:active{
+    scale: 60%;
+    transition: all 0.4s ease;
+}
+.aa{
+    transform: translateY(-20px);
+}
+@media screen and (max-width: 414px) and (min-width: 360px) {
+    .ProductPage{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+    }
+    .productInfoo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 60px;
+    }
+    .images{
+        width: 100%;
+        padding: 20px;
+    }
+    .images img{
+        width: 100%;
+
+        
+    }
+    .productInfoAll{
+        border-right: 1px solid #D1D1D1;
+        border-left: 1px solid #D1D1D1;
+        padding: 20px;
+        width: 100%;
+    }
+    .productInfoZakaz{
+        width: 100%;
+
+    }
+    .priceZakaz{
+        width: 90%;
+    }
+    .zakazInfo{
+        width: 80%;
+        
+    }
+    .zakazInfo p{
+        margin-bottom: 20px;
+    }
+}

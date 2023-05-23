@@ -1,0 +1,175 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+:root {
+    --add: #FFA500;
+}
+
+.Savat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px auto;
+}
+
+.addZakaz {
+    width: 300px;
+    height: 320px;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.buyurtma {
+    font-weight: 6 00;
+    font-size: 18px;
+    line-height: 28px;
+    color: #212121;
+    margin-bottom: 40px;
+}
+
+.buyurtma span {
+    padding: 2px 5px;
+    background-color: var(--add);
+    color: white;
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+.allPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+
+.zakazBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.zakazBtns p a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 278px;
+    height: 44px;
+    background: #FFA600;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+.zakazBtns p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 278px;
+    height: 44px;
+    background: #FFA600;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    transition: all 0.5s ease;
+}
+.zakazBtns p:active{
+    scale: 60%;
+    transition: all 0.5s ease;
+}
+
+
+.karzinkaProduct {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-box-shadow: 0px 3px 17px -6px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 3px 17px -6px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 3px 17px -6px rgba(34, 60, 80, 0.2);
+    padding: 5px 15px;
+    width: 750px;
+}
+
+.imgName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.imgName img {
+    height: 100px;
+    width: 100px;
+}
+.cunterPrice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.counter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;  
+    padding: 8px;
+    background: #FFEEE2;
+    border-radius: 6px;
+    color: var(--add);
+}
+.counter p{
+    cursor: pointer;
+}
+.karzinkaProducts{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 400px;
+    overflow-y: scroll;
+    gap: 30px;
+}
+@media screen and (max-width: 414px) and (min-width: 360px) {
+    .Savat{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+    .karzinkaProducts{
+        width: 100%;
+        gap: 40px;
+    }
+    
+    .karzinkaProduct{
+        width: 100%;
+    }
+    .cunterPrice{
+        gap: 5px;
+    }
+    .cunterPrice h5{
+        font-size: 14px;
+
+    }
+    .counter{
+
+        scale: 90%;
+    }
+    .imgName p{
+        width: 100%;
+    }
+}

@@ -1,0 +1,113 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="Orders">
+    <h1>1. Как вы хотите получить заказ?</h1>
+    <div class="zakaz">
+
+        <div class="zakazBtn const1">
+            <img src="{% static 'images/Vector2.svg' %}" alt="">
+            <p>Самовызов</p>
+        </div>
+        <div class="zakazBtn const2">
+            <img src="{% static 'images/boxtick.svg' %}" alt="">
+            <p>Доставка</p>
+        </div>
+    </div>
+    <h1>2. Укажите адрес доставки</h1>
+    <div class="gorod">
+
+        <div class="selects">
+            <p>Город</p>
+            <select aria-placeholder="Выберите город" name="" id="">
+                <option value="">Urgench</option>
+                <option value="">Xonka</option>
+                <option value="">shovot</option>
+                <option value="">bog'ot</option>
+            </select>
+        </div>
+        <div class="selects">
+            <p>Полный адрес</p>
+            <input type="text">
+        </div>
+    </div>
+    <h1>3. Контактное имя</h1>
+    <div class="gorod">
+        <div class="selects">
+            <p>Имя</p>
+            <input type="text" placeholder="Ism">
+        </div>
+        <div class="selects">
+            <p>Фамилия</p>
+            <input type="text" placeholder="Familiya">
+        </div>
+        <div class="selects">
+            <p>Телефон</p>
+            <input type="text" placeholder="Telefon">
+        </div>
+        <div class="selects">
+            <p>Дополнительный телефон</p>
+            <input type="text" placeholder="Qo'shimcha telefon">
+        </div>
+    </div>
+    <button class="order">
+        <span class="default">Buyurtma berish</span>
+        <span class="success">
+            Buyurtmangiz qabul qilindi
+            <svg viewBox="0 0 12 10">
+                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+            </svg>
+        </span>
+        <div class="box"></div>
+        <div class="truck">
+            <div class="back"></div>
+            <div class="front">
+                <div class="window"></div>
+            </div>
+            <div class="light top"></div>
+            <div class="light bottom"></div>
+        </div>
+        <div class="lines"></div>
+    </button>
+</div>
+
+<script>
+
+    const zakazBtn1 = document.querySelector('.const1')
+    const zakazBtn2 = document.querySelector('.const2')
+
+    zakazBtn1.onclick = function () {
+        zakazBtn1.classList.add('zakazBtnAdd')
+        zakazBtn2.classList.remove('zakazBtnAdd')
+
+    }
+
+    zakazBtn2.onclick = function () {
+        zakazBtn1.classList.remove('zakazBtnAdd')
+        zakazBtn2.classList.add('zakazBtnAdd')
+    }
+
+
+
+    const order = document.querySelector(".order");
+
+    function handleOrderClick() {
+        if (!order.classList.contains("animate")) {
+            order.classList.add("animate");
+            setTimeout(function () {
+                order.classList.remove("animate");
+            }, 10000);
+        }
+    }
+
+    function init() {
+        order.addEventListener("click", handleOrderClick);
+    }
+
+    init();
+
+
+</script>
+
+{% endblock content %}

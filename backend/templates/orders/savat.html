@@ -1,0 +1,93 @@
+{% extends 'home/base.html' %}
+{% load static %}   
+{% block content %}
+
+
+<div class="Savat">
+    <div class="karzinkaProducts">
+        <div class="karzinkaProduct">
+            <div class="imgName">
+                <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="">
+                <p>Chanel #112</p>
+            </div>
+            <div class="cunterPrice">
+                <div class="counter">
+                    <p>-</p>
+                    <span>0</span>
+                    <p>+</p>
+                </div>
+                <h5 class="price">999 000 so'm</h5>
+            </div>
+        </div>
+        <div class="karzinkaProduct">
+            <div class="imgName">
+                <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="">
+                <p>Chanel #112</p>
+            </div>
+            <div class="cunterPrice">
+                <div class="counter">
+                    <p>-</p>
+                    <span>0</span>
+                    <p>+</p>
+                </div>
+                <h5 class="price">999 000 so'm</h5>
+            </div>
+        </div>
+        <div class="karzinkaProduct">
+            <div class="imgName">
+                <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="">
+                <p>Chanel #112</p>
+            </div>
+            <div class="cunterPrice">
+                <div class="counter">
+                    <p>-</p>
+                    <span>0</span>
+                    <p>+</p>
+                </div>
+                <h5 class="price">999 000 so'm</h5>
+            </div>
+        </div>
+        <div class="karzinkaProduct">
+            <div class="imgName">
+                <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="">
+                <p>Chanel #112</p>
+            </div>
+            <div class="cunterPrice">
+                <div class="counter">
+                    <p>-</p>
+                    <span>0</span>
+                    <p>+</p>
+                </div>
+                <h5 class="price">999 000 so'm</h5>
+            </div>
+        </div>
+        <div class="karzinkaProduct">
+            <div class="imgName">
+                <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="">
+                <p>Chanel #112</p>
+            </div>
+            <div class="cunterPrice">
+                <div class="counter">
+                    <p>-</p>
+                    <span>0</span>
+                    <p>+</p>
+                </div>
+                <h5 class="price">999 000 so'm</h5>
+            </div>
+        </div>
+    </div>
+    <div class="addZakaz">
+        <p class="buyurtma">Sizning buyurtmangiz <span>0</span></p>
+        <div class="allPrice">
+            <span>Jami:</span>
+            <p>0 so`m</p>
+        </div>
+        <div class="zakazBtns">
+            <p>Dokonga Qaytish</p>
+            <p><a href="{% url 'orders:order' %}"> Sotib Olish</a> </p>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

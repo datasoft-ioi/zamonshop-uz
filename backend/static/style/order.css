@@ -1,0 +1,160 @@
+.Orders {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.Orders h1 {
+    font-size: 21px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.zakaz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.zakazBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 196px;
+    height: 50px;
+    border: 1px solid #BCBCBC;
+    border-radius: 3px;
+    gap: 13px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.zakazBtnAdd {
+    border: 1px solid var(--add);
+    scale: 90%;
+    transition: all 0.4s ease;
+    background-color: #ffa6007a;
+}
+
+.gorod {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 25px;
+    flex-wrap: wrap;
+    width: 570px;
+}
+
+.selects {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+
+.selects select {
+    width: 270px;
+    height: 50px;
+    border: 1px solid #BCBCBC;
+    border-radius: 3px;
+    outline: none;
+}
+
+.selects input {
+    width: 270px;
+    height: 50px;
+    border: 1px solid #BCBCBC;
+    border-radius: 3px;
+    outline: none;
+    padding: 10px;
+}
+
+.selects input::placeholder {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #919191;
+
+}
+
+.selects p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #636363;
+}
+
+.addZakazBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 560px;
+    height: 50px;
+    background: var(--add);
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.addZakazBtn:active {
+    scale: 80%;
+    transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 414px) and (min-width: 360px) {
+    .Orders {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 20px;
+        margin: 50px auto;
+        width: 100%;
+        padding: 3px;
+    }
+
+    .zakaz {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .gorod {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .addZakazBtn {
+        width: 100%;
+    }
+
+    .zakazBtn {
+        width: 168px;
+        height: 40px;
+        border: 1px solid #BCBCBC;
+        border-radius: 3px;
+    }
+
+    .selects select {
+        width: 100%;
+        height: 40px;
+        border: 1px solid #BCBCBC;
+        border-radius: 3px;
+    }
+}

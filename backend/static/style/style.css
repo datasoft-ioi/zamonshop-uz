@@ -840,3 +840,32 @@ body {
     grid-template-columns: repeat(3, 1fr);
   } 
 }
+
+.timout {
+  width: 500px;
+  background: #ffa600ee;
+  padding: 20px;
+  position: fixed;
+  bottom: 100px;
+  left: 38%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 999;
+}
+
+.timout span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+}
+
+.timout button {
+  padding: 10px 20px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.349);
+  color: white;
+  border-radius: 5px;
+}

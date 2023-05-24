@@ -118,6 +118,7 @@ swiper-slide img {
 }
 
 @media screen and (max-width: 420px) and (min-width: 320px) {
+
     .resHeaderCat {
         /* padding: 0px 10px; */
         padding-right: 10px;

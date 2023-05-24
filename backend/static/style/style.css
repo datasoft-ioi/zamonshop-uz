@@ -873,3 +873,11 @@ body {
   color: white;
   border-radius: 5px;
 }
+
+@media screen and (min-width: 320px) and (max-width: 414px) { 
+  .timout {
+    width: 100%;
+    left: 0;
+    bottom: 50px;
+  }
+}

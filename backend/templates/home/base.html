@@ -186,16 +186,20 @@
                 showPage('Home')
             </script>
         </header>
+        <div class="timout">
+            <span>Saytimizda hozircha dasturlash ishlari olib borilmoqda!</span>
+            <button>OK</button>
+        </div>
         <div class="mobilResponsive">
-            <a href="{% url 'home:home' %}" class="mobilResponsiveDivs">
+            <a style="text-decoration: none;" href="{% url 'home:home' %}" class="mobilResponsiveDivs">
                 <img src="{% static 'images/home.svg' %}" alt="">
                 <p>Главная</p>
             </a>
-            <a href="/" class="mobilResponsiveDivs">
+            <a style="text-decoration: none;" href="/" class="mobilResponsiveDivs">
                 <img width="25px" src="{% static 'images/heart.svg' %}" alt="">
                 <p>Избранное</p>
             </a>
-            <a href="{% url 'products:savat' %}" class="mobilResponsiveDivs">
+            <a style="text-decoration: none;" href="{% url 'products:savat' %}" class="mobilResponsiveDivs">
                 <img src="{% static 'images/shopping-cart.svg' %}" alt="">
                 <p>Корзина</p>
             </a>
@@ -211,7 +215,7 @@
             </div>
             </a>
             {% else %}
-            <a href="{% url 'users:login' %}">
+            <a style="text-decoration: none;" href="{% url 'users:login' %}">
             <div class="mobilResponsiveDivs">
                 <img src="{% static 'images/user.svg' %}" alt="">
                 <p>Kirish</p>

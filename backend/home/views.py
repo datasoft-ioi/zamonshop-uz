@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 
-from .models import Banner, SwipperBanner
+from .models import Banner, SwipperBanner, TwoTanla
 from products.models import Category, Product
 
 # Create your views here.
@@ -16,6 +16,7 @@ def index(request, cat_id=None):
         "products": products,
         "banner": Banner.objects.all().order_by("-id")[:5],
         "swipe_banner": SwipperBanner.objects.all().order_by("-id")[:5],
+        "tanlangan_banner": TwoTanla.objects.all().order_by("-id")[:2],
 
     }
 

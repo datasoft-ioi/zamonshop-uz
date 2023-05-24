@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Banner, SwipperBanner
+from .models import Banner, SwipperBanner, TwoTanla
 
 from mptt.admin import DraggableMPTTAdmin
 
@@ -12,5 +12,12 @@ class BannerAdmin(admin.ModelAdmin):
 @admin.register(SwipperBanner)
 class SwipperBannerAdmin(admin.ModelAdmin):
     pass
+
+@admin.register(TwoTanla)
+class TwoTanlaBannerAdmin(admin.ModelAdmin):
+    pass
+
+
+
 
 

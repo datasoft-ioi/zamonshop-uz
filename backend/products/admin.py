@@ -9,7 +9,7 @@ class CategoryAdmin(DraggableMPTTAdmin):
     list_display = ('tree_actions', 'indented_title',
                     'related_products_count', 'related_products_cumulative_count')
     list_display_links = ('indented_title',)
-    fields = ('name', 'slug', 'parent')
+    fields = ('name', 'slug', 'parent', 'top_image')
     prepopulated_fields = {'slug': ('name',)}
     # inlines = [CategoryLangInline]
     def get_queryset(self, request):

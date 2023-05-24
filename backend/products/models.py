@@ -10,6 +10,8 @@ class Category(MPTTModel):
     name = models.CharField(max_length=255)
     slug = models.SlugField(unique=True)
 
+    top_image = models.ImageField(upload_to='cat_img/%Y/%m/%d', null=True, blank=True)
+
     parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='children')
     
 

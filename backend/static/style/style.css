@@ -725,6 +725,7 @@ body {
     flex-wrap: wrap;
     width: 100%;
     padding: 0px !important;
+    padding-bottom: 150px;
   }
 
   .product {

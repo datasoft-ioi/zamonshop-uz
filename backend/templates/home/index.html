@@ -1,5 +1,5 @@
 {% extends 'home/base.html' %}
-{% load static %}
+{% load static humanize %}
 {% block content %}
 
 <!-- Main qismi -->
@@ -99,7 +99,7 @@
         <div class="Products">
             {% for prod in products %}
             
-            <div class="product">
+            {% comment %} <div class="product">
                 <div class="sale">
                     <span>20%/sale</span>
                 </div>
@@ -121,7 +121,29 @@
 
                     </div>
                 </div>
+            </div> {% endcomment %}
+            <div class="product">
+                <!-- <div class="sale">
+                    <span>20%/sale</span>
+                </div> -->
+                <a href="{% url 'products:product_detail' prod.id %}">
+                    <div class="img">
+                        <img style="width: 80%" src="{{prod.image.url}}" alt="" />
+                    </div>
+                </a>
+                <div class="poductInfo">
+                    <p class="name" style="font-size: 18px; width: 100%">{{prod.name}}</p>
+                    <p class="prodDesck" style="color: #5e5e5e;">{{prod.category.name}}</p>
+                    <p style="text-decoration:line-through; color: #8f8f8f; transform: translateY(10px); font-size: 14px;">{{prod.old_price}} so'm</p>
+                    <div class="sum">
+                        <p class="hozirgi" style="font-weight: 500;">{{prod.price | intcomma}} so'm</p>
+                        <div class="korish">
+                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             {% endfor %}
 
 
@@ -357,15 +379,18 @@
         <div class="Products">
 
             <div class="product">
+                <!-- <div class="sale">
+                    <span>20%/sale</span>
+                </div> -->
                 <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-
+                    <img src="https://mediapark.uz/_next/image?url=https%3A%2F%2Fcdn.newmediapark.uz%2Fimages%2Fe5f0cc8c-c8ec-43c0-bf04-6eeaebf6d899_test.jpg&w=1080&q=75" alt="" />
                 </div>
                 <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
+                    <p class="name" style="font-size: 18px; width: 100%">Samsung b32 92/88GB</p>
+                    <p class="prodDesck" style="color: #5e5e5e;">samsung</p>
+                    <p style="text-decoration:line-through; color: #8f8f8f; transform: translateY(10px); font-size: 14px;">999 999 so'm</p>
                     <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
+                        <p class="hozirgi" style="font-weight: 500;">888 000 so'm</p>
                         <div class="korish">
                             <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
                         </div>
@@ -375,14 +400,14 @@
 
             <div class="product">
                 <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-
+                    <img src="https://images.uzum.uz/chdrlk96i6dim8r78uug/t_product_540_high.jpg#1684579571975" alt="" />
                 </div>
                 <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
+                    <p class="name" style="font-size: 18px; width: 100%">Suv</p>
+                    <p class="prodDesck" style="color: #5e5e5e;">samsung</p>
+                    <p style="text-decoration:line-through; color: #8f8f8f; transform: translateY(10px); font-size: 14px;">999 999 so'm</p>
                     <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
+                        <p class="hozirgi" style="font-weight: 500;">888 000 so'm</p>
                         <div class="korish">
                             <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
                         </div>
@@ -390,107 +415,7 @@
                 </div>
             </div>
 
-            <div class="product">
-                <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
 
-                </div>
-                <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
-                    <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
-                        <div class="korish">
-                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-
-                </div>
-                <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
-                    <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
-                        <div class="korish">
-                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-
-                </div>
-                <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
-                    <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
-                        <div class="korish">
-                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-
-                </div>
-                <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
-                    <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
-                        <div class="korish">
-                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-
-                </div>
-                <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
-                    <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
-                        <div class="korish">
-                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="" />
-
-                </div>
-                <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
-                    <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
-                        <div class="korish">
-                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
 
         </div>
@@ -506,15 +431,18 @@
         <div class="Products">
 
             <div class="product">
+                <!-- <div class="sale">
+                    <span>20%/sale</span>
+                </div> -->
                 <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-
+                    <img src="https://mediapark.uz/_next/image?url=https%3A%2F%2Fcdn.newmediapark.uz%2Fimages%2Fe5f0cc8c-c8ec-43c0-bf04-6eeaebf6d899_test.jpg&w=1080&q=75" alt="" />
                 </div>
                 <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
+                    <p class="name" style="font-size: 18px; width: 100%">Samsung b32 92/88GB</p>
+                    <p class="prodDesck" style="color: #5e5e5e;">samsung</p>
+                    <p style="text-decoration:line-through; color: #8f8f8f; transform: translateY(10px); font-size: 14px;">999 999 so'm</p>
                     <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
+                        <p class="hozirgi" style="font-weight: 500;">888 000 so'm</p>
                         <div class="korish">
                             <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
                         </div>
@@ -524,116 +452,14 @@
 
             <div class="product">
                 <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-
+                    <img src="https://images.uzum.uz/chdrlk96i6dim8r78uug/t_product_540_high.jpg#1684579571975" alt="" />
                 </div>
                 <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
+                    <p class="name" style="font-size: 18px; width: 100%">Suv</p>
+                    <p class="prodDesck" style="color: #5e5e5e;">samsung</p>
+                    <p style="text-decoration:line-through; color: #8f8f8f; transform: translateY(10px); font-size: 14px;">999 999 so'm</p>
                     <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
-                        <div class="korish">
-                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-
-                </div>
-                <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
-                    <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
-                        <div class="korish">
-                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-
-                </div>
-                <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
-                    <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
-                        <div class="korish">
-                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-
-                </div>
-                <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
-                    <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
-                        <div class="korish">
-                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-
-                </div>
-                <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
-                    <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
-                        <div class="korish">
-                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-
-                </div>
-                <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
-                    <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
-                        <div class="korish">
-                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="img">
-                    <img src="{% static 'images/t_product_540_high.jpg.svg' %}" alt="" />
-
-                </div>
-                <div class="poductInfo">
-                    <p class="name">Chanel #112</p>
-
-                    <div class="sum">
-                        <p class="hozirgi">999 000 so'm</p>
+                        <p class="hozirgi" style="font-weight: 500;">888 000 so'm</p>
                         <div class="korish">
                             <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
                         </div>

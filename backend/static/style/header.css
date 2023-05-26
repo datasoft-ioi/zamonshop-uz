@@ -261,10 +261,13 @@ section {
         width: 100%;
     }
     .users{
-        gap: 0px;
+        display: flex;
+        gap: 30px;
+        align-items: center;
     }
     .accaunt{
-        padding: 3px 16px;
+        display: flex;
+        padding: 0;
     }
     .searchDiv{
         display: flex;
@@ -280,7 +283,7 @@ section {
         width: 100%;
     }
     .logo{
-        width: 100%;
+        width: 70%;
     }
     .listes{
         display: none;

@@ -1,5 +1,5 @@
 {% extends 'home/base.html' %}
-{% load static %}
+{% load static humanize %}
 {% block content %}
 
 <div class="productPage">
@@ -57,7 +57,7 @@
         </div>
         <div class="harxHator">
             <span>Narx:</span>
-            <p>{{product.price}} so'm</p>
+            <p>{{product.price | intcomma}} so'm</p>
         </div>
         <div class="btnsHator">
             <span>Savatga qoʻshish</span>
@@ -67,7 +67,7 @@
     <div class="mobilFooterKarzina">
         <div class="mobilResponsiveNarx">
             <span>Narx umumiy</span>
-            <p>14 000 so'm</p>
+            <p>{{product.price | intcomma}} so'm</p>
         </div>
         <i class="fa-regular fa-heart" style="color: #ffffff;"></i>
         <p class="mobilresponsiveBtn">

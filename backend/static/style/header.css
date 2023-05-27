@@ -164,13 +164,14 @@ header {
     width: 100%;
     height: 700px;  
     z-index: 99;
-    background-color: rgb(255, 255, 255);
+    background-color: aliceblue;
     transition: all 0.5s ease;
     opacity: 0;
 
 }
 .addKategori{
     top: 70px;
+    background-color: aliceblue;
     transition: all 0.5s ease;
     opacity: 1;
 }

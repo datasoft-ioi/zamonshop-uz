@@ -571,6 +571,7 @@ body {
   min-height: 100vh;
   font-family: Roboto, Arial;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   /* background: #e4ecfa; */
@@ -898,4 +899,69 @@ body {
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 0.5px;
+}
+
+.companyInfo {
+  width: 100%;
+  background: var(--add);
+  padding: 5px 0px;
+}
+
+.companyInfoCon {
+  width: 1160px;
+  margin:  0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.companyInfoLeft {
+  display: flex;
+  gap: 20px;
+}
+
+.companyInfoLeft span {
+  color: rgba(255, 255, 255, 0.921);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+
+.companyInfoLeft span:hover {
+  color: rgba(30, 30, 30, 0.665);
+}
+
+
+.companyInfoLeftRight {
+  display: flex;
+  gap: 20px;
+}
+
+.companyInfoLeftRight span {
+  color: rgba(255, 255, 255, 0.921);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+
+.companyInfoLeftRight span:hover {
+  color: rgba(30, 30, 30, 0.665);
+}
+
+.companyInfoLeft .ddata {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.921);
+  padding-left: 20px;
+}
+
+.companyInfoLeft .ddata:hover {
+  cursor: default;
+  color: rgba(255, 255, 255, 0.921);;
+}
+
+@media screen and (min-width: 320px) and (max-width:420px) {
+  .companyInfo {
+    width: 100%;
+    display: none;
+  }
 }

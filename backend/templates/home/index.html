@@ -10,13 +10,13 @@
 
             {% for ban in banner %}
             <div class="carousel-item active">
-                <img style="border-radius: 10px; width: 100%;" src="{{ban.image.url}}" class="d-block w-100" alt="">
+                <img style="border-radius: 10px; width: 100%;" src="https://zamonshop.uz/media/banner/2023/05/23/zamon.jpg" class="d-block w-100" alt="">
             </div>
             {% endfor %}
             
             {% else %}
             <div class="carousel-item active">
-                <img style="border-radius: 10px; width: 100%;" src="https://images.uzum.uz/chf3ql56sfhndlbm30ug/main_page_banner.jpg" class="d-block w-100" alt="">
+                <img style="border-radius: 10px; width: 100%;" src="https://zamonshop.uz/media/banner/2023/05/23/zamon.jpg" class="d-block w-100" alt="">
             </div>
 
             {% endif %}
@@ -109,7 +109,7 @@
                     </div>
                 </a>
                 <div class="poductInfo">
-                    <a href="{% url "products:product_detail" prod.id %}">
+                    <a style="text-decoration: none;" href="{% url "products:product_detail" prod.id %}">
                     <p class="name" style="font-size: 18px; width: 100%">{{prod.name}}</p>
                     </a>
                     <p class="prodDesck" style="color: #5e5e5e;">{{prod.category.name}}</p>

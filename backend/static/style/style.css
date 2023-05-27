@@ -887,3 +887,15 @@ body {
     bottom: 50px;
   }
 }
+
+.productDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.productDescription span {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}

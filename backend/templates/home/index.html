@@ -103,11 +103,15 @@
                 <!-- <div class="sale">
                     <span>20%/sale</span>
                 </div> -->
-                <div class="img">
-                    <img src="{{prod.image.url}}" alt="" />
-                </div>
+                <a href="{% url "products:product_detail" prod.id %}">
+                    <div class="img">
+                        <img src="{{prod.image.url}}" alt="" />
+                    </div>
+                </a>
                 <div class="poductInfo">
+                    <a href="{% url "products:product_detail" prod.id %}">
                     <p class="name" style="font-size: 18px; width: 100%">{{prod.name}}</p>
+                    </a>
                     <p class="prodDesck" style="color: #5e5e5e;">{{prod.category.name}}</p>
                     <p style="text-decoration:line-through; color: #8f8f8f; transform: translateY(5px); font-size: 14px;">{{prod.old_price}} so'm</p>
                     <div class="sum">

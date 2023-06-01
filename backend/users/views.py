@@ -40,7 +40,6 @@ def is_valid_uzbek_phone_number(phone_number):
     return bool(re.match(pattern, phone_number))
 
 
-
 @login_required
 def profil(request):
     if request.method == 'POST':

@@ -11,7 +11,19 @@ from rest_framework import viewsets
 from .models import Basket, Category, Subcategory, Product
 from .serializers import CategorySerializer, SubcategorySerializer, ProductSerializer
 
+from django.views.generic import TemplateView, ListView
+from django.db.models import Q 
 
+class SearchResultsView(ListView):
+    model = Product
+    template_name = "home/base.html"
+
+    def get_queryset(self):  # new
+        query = self.request.GET.get("q")
+        object_list = Product.objects.filter(
+            Q(name__icontains=query) | Q(state__icontains=query)
+        )
+        return object_list
 
 def products(request):
     return render(request, "products/products.html")

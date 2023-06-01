@@ -13,4 +13,5 @@ urlpatterns = [
     path('basket/<int:product_id>', basket_add, name="basketadd"),
     path('basket/<int:basket_id>', basket_remove, name="basketremove"),
     path('category/', productCategory, name="category"),
+    # path("search/", SearchResultsView.as_view(), name="search_results"),
 ]

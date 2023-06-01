@@ -65,7 +65,7 @@
                     </a>
                 </div>
                 </div>
-               <div class="mobilNav1Div">
+               {% comment %} <div class="mobilNav1Div">
                 <div class="kategoriSearch">
                     <div class="kategori">
                         <img src="{% static 'images/Frame.svg' %}" alt="">
@@ -77,7 +77,7 @@
                         </div>
                     </div>
                 </div>
-               </div>
+               </div> {% endcomment %}
 
             </nav>
 
@@ -89,7 +89,8 @@
                         <p>Kategory</p>
                     </div>
                     <div class="searchDiv">
-                        <input type="text" placeholder="izlash...">
+                        {% comment %} <input type="text" placeholder="izlash..."> {% endcomment %}
+                        <input name="q" type="text" placeholder="izlash...">
                         <div class="searchIcon">
                             <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
                         </div>

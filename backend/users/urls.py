@@ -5,6 +5,7 @@ from . import views
 from rest_framework import routers, serializers, viewsets
 from rest_framework_simplejwt.views import (
     TokenRefreshView,
+    
 )
 
 from . import views
@@ -35,6 +36,6 @@ urlpatterns = [
     path('myproduct/', views.myproduct, name="myproduct"),
     path('mylocation/' , views.mylocation , name="mylocation"),
     path('', views.profil , name="users"),
-    
+
 ]
 

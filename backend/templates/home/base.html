@@ -71,9 +71,9 @@
                         <img src="{% static 'images/Frame.svg' %}" alt="">
                     </div>
                     <div class="searchDiv">
-                        <input type="text" placeholder="izlash...">
+                        <input type="search" placeholder="izlash..." action="{%  url 'serach' %}">
                         <div class="searchIcon">
-                            <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+                            <i   class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
                         </div>
                     </div>
                 </div>
@@ -92,7 +92,7 @@
                         {% comment %} <input type="text" placeholder="izlash..."> {% endcomment %}
                         <input name="q" type="text" placeholder="izlash...">
                         <div class="searchIcon">
-                            <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+                            <i type ='submit' class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
                         </div>
                     </div>
                 </div>

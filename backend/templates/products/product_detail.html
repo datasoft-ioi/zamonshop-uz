@@ -43,6 +43,12 @@
         </div>
         <hr>
         <div class="counterSotuv">
+
+        </div>
+        <div class="counterSotuv">
+            <form action="#" class="cart-quantity">
+
+
             <p>Miqdor:</p>
             <div class="CounterS">
                 <div class="Counter">
@@ -50,8 +56,9 @@
                     <span>1</span>
                     <span class="counterBtn">+</span>
                 </div>
-                <span style="color: #0c16a5;" class="productSon">Bor-yoʻgi 2 dona qoldi</span>
+                <span style="color: #0c16a5;" class="productSon">Bor-yoʻgi {{product.old_price | intcomma}} dona qoldi</span>
             </div>
+        </form>
         </div>
         <div class="harxHator">
             <span>Narx:</span>
@@ -62,46 +69,8 @@
             <p>Hoziroq sotib olish</p>
         </div>
         <div class="productDescription">
-            <span>Iphone 14 pro max</span>
-            <p>Brend
-                Apple
-                Batareya (mAh)
-                4323
-                Тип Sim карты
-                E-Sim
-                Og'irligi (g)
-                250
-                Qalinligi (mm)
-                7.65
-                Kengligi (mm)
-                78.1
-                Balandligi (mm)
-                160.8
-                Rang
-                Фиолетовый
-                OS versiyasi
-                iOS 16
-                Ekranning yangilanish tezligi
-                120 герц.
-                Operativ xotira (GB)
-                6
-                Protsessor
-                Apple A16 Bionic Pro
-                Kamera (MP)
-                48+12+12
-                Разрешение (пикселей)
-                1170x2532
-                Диагональ (дюймов)
-                6.7
-                Old kamera (Mp)
-                12
-                Yadrolar soni
-                6
-                O'rnatilgan xotira (GB)
-                128
-                Model
-                iPhone 14 Pro Max
-            </p>
+            <span>{{product.name | intcomma}}</span>
+            <p>{{product.description | intcomma}}</p>
         </div>
     </div>
     <div class="mobilFooterKarzina">

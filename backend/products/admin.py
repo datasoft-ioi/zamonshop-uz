@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Subcategory, Product
+from .models import Category, Subcategory, Product, Imagte4
 
 from mptt.admin import DraggableMPTTAdmin
 
@@ -53,5 +53,6 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Category, CategoryAdmin)
+admin.site.register(Imagte4)
 admin.site.register(Subcategory)
 admin.site.register(Product, ProductAdmin)

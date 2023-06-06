@@ -18,14 +18,17 @@ from django.db.models import Q
 
 class SearchResultsView(ListView):
     model = Product
-    template_name = "home/base.html"
+    template_name = "home/serach.html"
 
     def get_queryset(self):  # new
         query = self.request.GET.get("q")
         object_list = Product.objects.filter(
-            Q(name__icontains=query) | Q(state__icontains=query)
+            Q(name__icontains=query) | Q(slug__icontains=query)
         )
-        return object_list
+        Ayollar_uchun = Product.objects.filter(
+            Q(name__icontains=query) | Q(slug__icontains=query)
+        )
+        return object_list,Ayollar_uchun
 
 class Search(ListView):
     

@@ -27,5 +27,5 @@ def index(request, cat_id=None):
 
 
 def chat(request):
-    return render(request, 'chat/chat.html')
+    return render(request, "chat/chat.html")
 

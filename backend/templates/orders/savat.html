@@ -3,84 +3,33 @@
 {% block content %}
 
 
+
+
 <div class="Savat">
     <div class="karzinkaProducts">
+        {% for bask in baskets %}
         <div class="karzinkaProduct">
             <div class="imgName">
-                <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="">
-                <p>Chanel #112</p>
+                <img src="{{ bask.product.image.image.url }}" alt="">
+                <p>{{ bask.product.name }}</p>
             </div>
             <div class="cunterPrice">
                 <div class="counter">
                     <p>-</p>
-                    <span>0</span>
+                    <span>{{ bask.quantity }} </span>
                     <p>+</p>
                 </div>
-                <h5 class="price">999 000 so'm</h5>
+                <h5 class="price">{{ bask.de_json.sum }} so'm</h5>
             </div>
         </div>
-        <div class="karzinkaProduct">
-            <div class="imgName">
-                <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="">
-                <p>Chanel #112</p>
-            </div>
-            <div class="cunterPrice">
-                <div class="counter">
-                    <p>-</p>
-                    <span>0</span>
-                    <p>+</p>
-                </div>
-                <h5 class="price">999 000 so'm</h5>
-            </div>
-        </div>
-        <div class="karzinkaProduct">
-            <div class="imgName">
-                <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="">
-                <p>Chanel #112</p>
-            </div>
-            <div class="cunterPrice">
-                <div class="counter">
-                    <p>-</p>
-                    <span>0</span>
-                    <p>+</p>
-                </div>
-                <h5 class="price">999 000 so'm</h5>
-            </div>
-        </div>
-        <div class="karzinkaProduct">
-            <div class="imgName">
-                <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="">
-                <p>Chanel #112</p>
-            </div>
-            <div class="cunterPrice">
-                <div class="counter">
-                    <p>-</p>
-                    <span>0</span>
-                    <p>+</p>
-                </div>
-                <h5 class="price">999 000 so'm</h5>
-            </div>
-        </div>
-        <div class="karzinkaProduct">
-            <div class="imgName">
-                <img src="{% static 'images/t_product_540_high.jpg.png' %}" alt="">
-                <p>Chanel #112</p>
-            </div>
-            <div class="cunterPrice">
-                <div class="counter">
-                    <p>-</p>
-                    <span>0</span>
-                    <p>+</p>
-                </div>
-                <h5 class="price">999 000 so'm</h5>
-            </div>
-        </div>
-    </div>
+        {% endfor %}
+
+    </div>     
     <div class="addZakaz">
-        <p class="buyurtma">Sizning buyurtmangiz <span>0</span></p>
+        <p class="buyurtma">Sizning buyurtmangiz <span>{{ total_quantity }}</span></p>
         <div class="allPrice">
             <span>Jami:</span>
-            <p>0 so`m</p>
+            <p>{{ total_sum }} so`m</p>
         </div>
         <div class="zakazBtns">
             <p>Dokonga Qaytish</p>

@@ -4,14 +4,15 @@
 
 <div class="productPage">
     <div class="productPage_Image">
-        <p class="boshTitle">Bosh sahifa / Barcha turkumlar / Oziq-ovqat mahsulotlari / Bakaleya / Yog’lar </p>
+        <p class="boshTitle">Bosh sahifa / Barcha turkumlar / {{product.category}}  / {{product.name}}  </p>
         <div class="productPage_Img">
-            <img class="productImgInfo" src="{{product.image.url}}" alt="">
+            <img class="productImgInfo" src="{{product.image.image.url}}" alt="">
+            
             <div class="productImages">
-                <img class="productImgInfo_mini" src="{% static 'images/t_product_540_high.jpg.png' %}" alt="">
-                <img class="productImgInfo_mini" src="{% static 'images/t_product_540_high.jpg.png' %}" alt="">
-                <img class="productImgInfo_mini" src="{% static 'images/t_product_540_high.jpg.png' %}" alt="">
-                <img class="productImgInfo_mini" src="{% static 'images/t_product_540_high.jpg.png' %}" alt="">
+                <img class="productImgInfo_mini" src="{{product.image.image1.url}}" alt="">
+                <img class="productImgInfo_mini" src="{{product.image.image2.url}}" alt="">
+                <img class="productImgInfo_mini" src="{{product.image.image3.url}}" alt="">
+                <img class="productImgInfo_mini" src="{{product.image.image4.url}}" alt="">
             </div>
         </div>
 
@@ -64,10 +65,12 @@
             <span>Narx:</span>
             <p>{{product.price | intcomma}} so'm</p>
         </div>
-        <div class="btnsHator">
-            <span>Savatga qoʻshish</span>
-            <p>Hoziroq sotib olish</p>
-        </div>
+       
+          <div class="btnsHator">
+              <a href=  "{% url "products:basketadd" product.id %}"><span>Savatga qoʻshish </span></a>
+             <p>Hoziroq sotib olish</p>
+          </div>
+        
         <div class="productDescription">
             <span>{{product.name | intcomma}}</span>
             <p>{{product.description | intcomma}}</p>

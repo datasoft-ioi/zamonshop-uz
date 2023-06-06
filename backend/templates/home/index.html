@@ -105,7 +105,7 @@
                 </div> -->
                 <a href="{% url "products:product_detail" prod.id %}">
                     <div class="img">
-                        <img src="{{prod.image.url}}" alt="" />
+                        <img src="{{prod.image.image.url}}" alt="" />
                     </div>
                 </a>
                 <div class="poductInfo">
@@ -116,9 +116,11 @@
                     <p style="text-decoration:line-through; color: #8f8f8f; transform: translateY(5px); font-size: 14px;">{{prod.old_price}} so'm</p>
                     <div class="sum">
                         <p class="hozirgi" style="font-weight: 500;">{{prod.price}} so'm</p>
+                        <a href="{% url "products:basketadd" prod.id %}">
                         <div class="korish">
                             <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
                         </div>
+                        </a>
                     </div>
                 </div>
             </div>

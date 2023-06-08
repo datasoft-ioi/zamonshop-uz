@@ -1,3 +1,5 @@
+from typing import Any, Dict
+from django.db.models.query import QuerySet
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.views.generic import TemplateView
@@ -24,6 +26,19 @@ class SearchResultsView(ListView):
             Q(name__icontains=query) | Q(state__icontains=query)
         )
         return object_list
+
+class Search(ListView):
+    
+    paginate_by = 3
+
+
+    def get_queryset(self):
+        return Product.objects.filter(name__description=self.request.GET.get("q"))
+    
+    def get_context_data(self, *args,  **kwargs):
+        context =super().get_context_data(*args, **kwargs)
+        context["q"] = self.request.GET.get("q")
+        return context
 
 def products(request):
     return render(request, "products/products.html")

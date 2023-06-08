@@ -1,0 +1,43 @@
+{% extends 'home/base.html' %}
+{% block content %}
+
+<h1>Search Results</h1>
+<div class="productInfo">
+
+    <!-- Mahsulotlar -->
+
+    <div class="Products">
+        {% for prod in object_list %}
+        
+        <div class="product">
+            <!-- <div class="sale">
+                <span>20%/sale</span>
+            </div> -->
+            <a href="{% url "products:product_detail" prod.id %}">
+                <div class="img">
+                    <img src="{{prod.image.image.url}}" alt="" />
+                </div>
+            </a>
+            <div class="poductInfo">
+                <a style="text-decoration: none;" href="{% url "products:product_detail" prod.id %}">
+                <p class="name" style="font-size: 18px; width: 100%">{{prod.name}}</p>
+                </a>
+                <p class="prodDesck" style="color: #5e5e5e;">{{prod.category.name}}</p>
+                <p style="text-decoration:line-through; color: #8f8f8f; transform: translateY(5px); font-size: 14px;">{{prod.old_price}} so'm</p>
+                <div class="sum">
+                    <p class="hozirgi" style="font-weight: 500;">{{prod.price}} so'm</p>
+                    <a href="{% url "products:basketadd" prod.id %}">
+                    <div class="korish">
+                        <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+
+
+    </div>
+</div>
+{% endblock content %}

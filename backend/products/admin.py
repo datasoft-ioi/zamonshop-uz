@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Subcategory, Product, Imagte4
+from .models import Category, Subcategory, Product, Imagte4,Basket
 
 from mptt.admin import DraggableMPTTAdmin
 

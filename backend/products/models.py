@@ -40,11 +40,11 @@ class Subcategory(models.Model):
         return self.name
 
 class Imagte4(models.Model):
-    image = models.ImageField(upload_to='products/',  null=True, blank=True)
-    image1 = models.ImageField(upload_to='products/', null=True, blank=True)
-    image2 = models.ImageField(upload_to='products/', null=True, blank=True)
-    image3 = models.ImageField(upload_to='products/', null=True, blank=True)
-    image4 = models.ImageField(upload_to='products/', null=True, blank=True)
+    image = models.ImageField(upload_to='products/',  null=False, blank=True)
+    image1 = models.ImageField(upload_to='products/', null=False, blank=True)
+    image2 = models.ImageField(upload_to='products/', null=False, blank=True)
+    image3 = models.ImageField(upload_to='products/', null=False, blank=True)
+    image4 = models.ImageField(upload_to='products/', null=False, blank=True)
     image5 = models.ImageField(upload_to='products/', null=True, blank=True)
     image6 = models.ImageField(upload_to='products/', null=True, blank=True)
 
